@@ -1,0 +1,743 @@
+@media (min-width: 1200px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+    #user-to-menu {
+        display: inline-block;
+        width: 120px;
+        text-decoration: none;
+    }
+
+    #user-to-menu img {
+        width: 100%;           
+        height: 100px;          
+        display: block;
+        margin-top: -15px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas:
+            "sub1 sub1"
+            "section1 section1"
+            "map aside"
+            "sub2 aside"
+            "section2 aside";
+        gap: 20px;
+        padding: 20px;
+    }
+
+    #sub1 {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:thistle;
+        -webkit-text-stroke: black 1px;
+        padding-left: 10px;
+        margin-top: 10px;
+    }
+
+    #sub1, #sub2 {
+        grid-column: span 2;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    #section1 {
+        grid-area: section1;
+        display: flex;
+        align-items: center;
+        background: white;
+        border-radius: 15px;
+        padding: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .viewport {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .track {
+        display: flex;
+        gap: 20px;
+        transition: transform 0.5s ease;
+    }
+
+    .track > div {
+        flex: 0 0 calc((100% - 40px)/3);
+        text-align: center;
+    }
+
+    .news {
+        width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        padding: 10px 0px;
+    }
+
+    article {
+        grid-area: map;
+        background: white;
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    #map {
+        width: 100%;
+        height: 450px;
+        border-radius: 10px;
+    }
+
+    #section2 > div {
+        display: flex;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    #section2 .text {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    aside {
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        gap: 65px;
+    }
+
+    aside img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    
+    #firstAd img {
+        height: 470px;
+    }
+
+    #secondAd  img {
+        height: 380px;
+    }
+
+    .prev, .next {
+        background: #2c3e50;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    header {
+        grid-area: header;
+        border-bottom: solid 2px black;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        padding-left: 10px;
+        font-size: 16px;
+    }
+
+    nav img:nth-child(1) {
+        width: 70px;
+        height: 70px;
+        padding-top: 25px;
+    }
+
+    nav img:nth-child(2) {
+        width: 120px;
+        height: 100px;
+        padding-top: 10px;
+    }
+
+    nav button {
+        cursor: pointer;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    #locationButton {
+        color:lightseagreen;
+        background-color: white;
+        border: none;
+        font-family: 'Times New Roman', Times, serif;
+        width: auto;
+        height: 20px;
+        margin-top: 50px;
+    }
+
+    #searchButton {
+        display: flex;
+        color:steelblue;
+        background-color: bisque;
+        border-radius: 8px;
+        width: 490px;
+        height: 36px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 42px;
+        margin-left: 25px;
+    }
+
+    #signInButton, #logInButton, #logOutButton {
+        display: flex; 
+        color: black;
+        text-decoration: none;
+        margin-top: 52px;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #loop {
+        background-color:aliceblue;
+        border-radius: 18px;
+        border: solid black 1px;
+        padding: 4px;
+    }
+
+    #uploadButton {
+        color:lightseagreen;
+        background-color: white;
+        border: none;
+        font-family: 'Times New Roman', Times, serif;
+        width: auto;
+        height: 20px;
+        margin-top: 47px;
+        margin-left: 10px;
+    }
+
+    #accountButton {
+        color: black;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-decoration: none;
+        cursor: pointer;
+        width: auto;
+        height: 20px;
+        margin-top: 48px;
+        margin-left: 15px;
+    }
+
+    footer {
+        grid-area: footer;
+        color: black;
+        font-weight:bold;
+        background-color:thistle;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 14px;
+        text-align: center;
+        padding: 5px 0px;
+    }
+
+    #sub2 {
+        font-size: 16px;
+        color: turquoise;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: italic;
+        background-color: white;
+        border-radius: 8px;
+        padding: auto;
+        padding-left: 10px;
+        margin-top: -20px;
+    }
+
+    .places {
+        display: flex;
+        padding-right: 15px;
+    }
+
+    .locals {
+        object-fit: contain;
+        width: 300px;
+        height: 200px;
+        padding-left: 20px;
+    }
+
+    .text {
+        width: 300px;
+        margin-top: 18px;
+        text-align: justify;
+        font-family:Arial, Helvetica, sans-serif;
+        color:black;
+    }
+
+    .text h3 {
+        text-decoration: underline;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background: linear-gradient(
+        to bottom,
+        #ffffff 0px,
+        #ffffff 180px,
+        #e8f5e9 300px,
+        #81c784 600px,
+        #2e8b57 1000px,
+        #1b5e20 100%
+        );
+    }
+
+    .controls2 {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .prev2, .next2 {
+        background: #2c3e50;
+        color: white;
+        border: none;
+        padding: 10px 14px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    #section2 {
+        grid-area: section2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        overflow: hidden;
+        background: white;
+        border-radius: 15px;
+        padding: 0px 15px;
+        margin-top: -20px;
+    }
+
+    .prev2, .next2 {
+        background: #2c3e50;
+        color: white;
+        border: none;
+        padding: 14px;
+        cursor: pointer;
+        flex-shrink: 0;
+        height: 400px;
+    }
+
+    .viewport2 {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .track2 {
+        display: flex;
+        gap: 20px;
+        transition: transform 0.4s ease;
+    }
+
+    .column {
+        min-width: 850px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        flex-shrink: 0;
+    }
+
+    #formFlex {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #f1, #f2 {
+        margin: auto;
+    }
+
+    #f1 {
+        background-color: cornsilk;
+        border: dashed 2px cornflowerblue;
+        border-radius: 9px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        -webkit-text-stroke: black 0.8px;
+        width: 500px;
+        height: auto;
+        padding-bottom: 15px;
+        align-items: center;
+        margin-bottom: -100px;
+        margin-right:70px;
+    }
+
+    #f1 h1 {
+        color: cornflowerblue;
+        text-align: center;
+    }
+
+    #f1 h2 {
+        color: black;
+        margin-left: 30px;
+        text-decoration: underline;
+    }
+
+    #f1 h3 {
+        color: white;
+        margin-left: 30px;
+    }
+
+    #f1 input, #genderSelector {
+        border-radius: 5px;
+        margin-left: 30px;
+        width: 200px;
+        -webkit-text-stroke: transparent;
+    }
+
+    #f1 #buttonOne {
+        display: flex;
+        background-color: white;
+        color: cadetblue;
+        -webkit-text-stroke: 0px;
+        margin-left: 30px;
+        border-radius: 8px;
+        padding: 4px 6px;
+        margin-top: -30px;
+    }
+
+    #f1 #buttonOne:hover {
+        color: black;
+        background-color: snow;
+        cursor: pointer;
+    }
+
+    #f1 #buttonFour {
+        background: none;
+        border: none;
+        color: black;
+        -webkit-text-stroke: 0px;
+        margin-left: 280px;
+        margin-top: 30px;
+    }
+
+    #f1 #buttonFour span {
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+    }
+
+    #genderSelector {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border-radius: 5px;
+        margin-left: 30px;
+        width: 208px;
+        height: 22px;
+        border: 2px inset rgb(118, 118, 118);
+        background-color: white;
+        color: rgb(117, 117, 117);
+        font-size: 13px;
+        font-weight: 400;
+        font-family: Arial;
+        padding-left: 2px;
+    }
+
+    #f2 {
+        background-color: cornsilk;
+        border:saddlebrown dashed 2px;
+        border-radius: 9px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: white;
+        -webkit-text-stroke: black 0.8px;
+        width: 505px;
+        height: auto;
+        padding-bottom: 15px;
+        margin-top: 0px;
+        margin-right: 68px;
+        align-items: center;
+    }
+
+    #f2 h1 {
+        text-align: center;
+        color: saddlebrown;
+    }
+
+    #f2 h2 {
+        color: black;
+        text-decoration: underline;
+        margin-left: 30px;
+    }
+
+    #f2 h3 {
+        color: white;
+        margin-left: 30px;
+    }
+
+    #f2 input {
+        border-radius: 5px;
+        margin-left: 30px;
+        width: 200px;
+        -webkit-text-stroke: transparent;
+    }
+
+    #buttonTwo{
+        display: flex;
+        background: none;
+        border: none;
+        text-decoration: blue underline 1px;
+        cursor: pointer;
+        color: blue;
+        font-size: 14px;
+        margin-left: 15px;
+        -webkit-text-stroke: transparent;
+        font-style: oblique;
+        margin-left: 280px;
+        margin-top: 20px;
+    }
+
+    #f2 #buttonThree {
+        display: flex;
+        cursor: pointer;
+        border: solid double 5px gray;
+        color:cadetblue;
+        -webkit-text-stroke: 0px;
+        background-color: white;
+        border-radius: 8px;
+        padding: 3px 6px;
+        margin-left: 30px;
+        margin-top:-25px;
+    }
+
+    #f2 #buttonThree:hover {
+        color:black;
+        background-color:snow;
+    }
+
+    #formFlex {
+        display: flex;
+        flex-direction: column;
+        margin-left: 300px;
+    }
+
+    #formFlex section article {
+        background: transparent;
+    }
+
+    #formFlex section img {
+        width: 100%;
+        height: 200px;
+        object-fit: fill;
+        display: block;
+        align-items: left;
+    }
+
+    #formFlex section article {
+        width: 100%;
+        background: transparent;
+        margin: 0;
+        padding: 0;
+    }
+
+    #formFlex #ad7 {
+        background-image: url("Fotos/addHorizontal3.png");
+        background-repeat: repeat-x;
+        background-size: auto 100px;
+        width: 101vw;
+        height: 100px;
+        margin-top: 120px;
+        margin-bottom: -100px;
+        margin-left: calc(-52vw + 50%);
+    }  
+
+    #formFlex #ad8 {
+        background-image: url("Fotos/addHorizontal2.png");
+        background-repeat: repeat-x;
+        background-size: auto 100px;
+        width: 101vw;
+        height: 100px;
+        margin-top: 20px;
+        margin-bottom: -100px;
+        margin-left: calc(-52vw + 51%);
+    }
+
+    #myUserFlex article {
+        width: 100%;
+        background: transparent;
+        margin: 0px 0px 10px 0px;
+        padding: 0;
+    }
+    
+    #myUserFlex #ad9 {
+        background-image: url("Fotos/addHorizontal1.png");
+        background-repeat: repeat-x;
+        background-size: auto 100px;
+        width: 101vw;
+        height: 100px;
+        margin-top: 50px;
+        margin-left: calc(-50vw + 50%)
+    }
+
+    body {
+        margin: 0;
+    }
+
+    #myUserFlex {
+        display: flex;
+        flex-direction: center;
+        border: solid black 2px;
+        width: 510px;
+        height: 1250px;
+        margin-top: 10px;
+        background:
+        linear-gradient(
+        to top,
+        transparent 0%,
+        transparent 84%,
+        #FFD533 60%,
+        #FFD533 60%
+        ),
+        url("Fotos/petWallpaper.png");
+        background-size: 90%;
+        background-position: center;
+    }
+
+    #myUserFlex h2 {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-left: 20px;
+        color:#FFD533;
+        -webkit-text-stroke: black 1px;
+    }
+
+    #myUserFlex input {
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+        border: solid teal 1.5px;
+        border-radius: 5px;
+        margin-left: 20px;
+        width: 200px;
+    }
+
+    #administrateGallery {
+        display: flex;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: bold;
+        margin-left: 20px;
+        color:#FFD533;
+        -webkit-text-stroke: black 1px;
+        background: none;
+        border: none;
+        font-size: 16px;
+        margin: 5px 0px 5px 440px;
+        cursor: pointer;
+    }
+
+    #administrateGallery:hover {
+        color: gainsboro;
+        -webkit-text-stroke: 0px;
+    }
+
+    #gridGallery1 {
+        width: 500px;
+        height: 450px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 3px;
+        margin-left: 5px;
+    }
+
+    .gridGallery2 {
+        border: solid 0.6px seagreen;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #myUserFlex .galleryPics {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    #myUserFlex #circle {
+        display: flex;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background-color: skyblue;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-left: 130px;
+    }
+
+    #submitChangesButton {
+        background: none;
+        background-color: #FFD533;
+        color: black;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 4px 6px;
+        border: solid black 1.5px;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 5px 0px 0px 5px;
+    }
+
+    #submitChangesButton:hover {
+        background-color: wheat;
+        color: white;
+    }
+
+    #cancelChangesButton {
+        background: none;
+        background-color: white;
+        color: red;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin: 5px 0px 0px 5px;
+        padding:4px 6px;
+        border: solid black 1.5px;
+        cursor: pointer;
+        width: 78px;
+    }
+
+    #cancelChangesButton:hover {
+        background-color:aqua;
+        color:red;
+    }
+
+    #myUserFlex #deleteButton {
+        display: flex;
+        margin-top: 20px;
+        margin-left: 200px;
+        background: none;
+        font-size: 16px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: red;
+        text-decoration: underline;
+        cursor: pointer;
+        border: none;
+    }
+
+    #myUserFlex #deleteButton:hover {
+        font-weight: bold;
+        text-transform: scale(1.2);
+    }
+
+    #logOutButton,
+    #accountButton {
+        display: none;
+    }
+
+    .logged #signInButton,
+    .logged #logInButton {
+        display: none;
+    }
+
+    .logged #logOutButton,
+    .logged #accountButton {
+        display: inline-block;
+    }
+
+    .hr {
+        border: transparent;
+    }
+}

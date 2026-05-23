@@ -1,0 +1,38 @@
+    header h1 {
+        background-color: #d8f3dc;
+        padding: 10px;
+        text-align: center;
+        text-decoration: underline;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color:peru;
+    }    
+
+    article {
+        display: flex;
+        gap: 10px;
+    }
+
+    p {
+        text-align: justify;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 14px;
+        padding: 20px;
+        border: black solid 1px;
+    }
+
+    img {
+        width: 600px;
+        height:373px;
+        padding-top: 15px;
+    }
+
+    footer {
+        grid-area: footer;
+        color: black;
+        font-weight:bold;
+        background-color:thistle;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 14px;
+        text-align: center;
+        padding: 10px 0px;
+    }
